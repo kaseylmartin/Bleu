@@ -2203,4 +2203,7 @@ input, select, textarea {
     line-height: 1;
     margin-bottom: 15px; /* Optional: Adjust space between paragraphs */
 }
+.about-images {
+    padding-bottom: 30px !important;
+}
 }

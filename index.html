@@ -103,34 +103,54 @@
 							
 
 						<!-- Contact -->
-							<article id="contact" class="panel">
-								<header>
-									<h2>Let's Connect</h2>
-								</header>
-								<form action="#" method="post">
-									<div>
-										<div class="row">
-											<div class="col-6 col-12-medium">
-												<input type="text" name="name" placeholder="Name" />
-											</div>
-											<div class="col-6 col-12-medium">
-												<input type="text" name="email" placeholder="Email" />
-											</div>
-											<div class="col-12">
-												<input type="text" name="subject" placeholder="Subject" />
-											</div>
-											<div class="col-12">
-												<textarea name="message" placeholder="Message" rows="6"></textarea>
-											</div>
-											<div class="col-12">
-												<input type="submit" value="Send Message" />
-											</div>
+						<article id="contact" class="panel">
+							<header>
+								<h2>Let's Connect</h2>
+							</header>
+							<form id="contact-form" action="https://formsubmit.co/onceinableu@gmail.com" method="POST">
+								<div>
+									<div class="row">
+										<div class="col-6 col-12-medium">
+											<input type="text" name="name" placeholder="Your Name" required />
+										</div>
+										<div class="col-6 col-12-medium">
+											<input type="email" name="email" placeholder="Your Email" required />
+										</div>
+										<div class="col-12">
+											<input type="text" name="subject" placeholder="Subject" />
+										</div>
+										<div class="col-12">
+											<textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+										</div>
+										<div class="col-12">
+											<button type="submit">Send Message</button>
 										</div>
 									</div>
-								</form>
-							</article>
-
-					</div>
+								</div>
+							</form>
+						
+							<!-- Success Message -->
+							<div id="success-message" style="display: none; padding-top: 15px;">
+								<p>✔️ Thank you! Your message has been sent.</p>
+							</div>
+						</article>
+						
+						<script>
+						  document.getElementById("contact-form").addEventListener("submit", function(event){
+							event.preventDefault(); // Prevents immediate form submission
+						
+							// Show success message
+							document.getElementById("success-message").style.display = "block";
+						
+							// Hide the form
+							document.getElementById("contact-form").style.display = "none";
+						
+							// Submit the form after 3 seconds
+							setTimeout(() => {
+							  this.submit();
+							}, 3000);
+						  });
+						</script>
 
 				<!-- Footer -->
 					<div id="footer">

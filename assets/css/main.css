@@ -2172,15 +2172,18 @@ input, select, textarea {
 		/* Default (Desktop / Web) Styles */
 .about-images {
     display: flex; /* Make sure flexbox is applied */
-    flex-direction: row; /* Align images side by side */
-    justify-content: space-between; /* Distribute space evenly between images */
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+    justify-content: space-between; /* Space out the images evenly */
+    gap: 16px; /* Optional: space between the images */
     align-items: center; /* Vertically center images */
 }
 
 .about-thumbnail {
-    width: 48%; /* Each image takes up 48% of the container */
-    max-width: 100%; /* Ensure images don’t exceed their container */
-    margin-bottom: 20px; /* Remove space between images */
+    flex: 1 1 30%; /* Each image will take up 30% of the container's width */
+    max-width: 33%; /* Ensures that 3 images fit in one row */
+    width: 100%; /* Make sure the image stretches to fill its container */
+    margin-bottom: 20px; /* Add space below the images */
+    object-fit: cover; /* Make sure images fill the space without distorting */
 }
 
 /* Mobile Styles */
@@ -2191,9 +2194,7 @@ input, select, textarea {
     }
 
     .about-thumbnail {
-        width: 100%; /* Images will take up 100% of the screen on mobile */
-        max-width: 100%; /* Ensure the images do not exceed the width of their container */
+        width: 100%; /* Images will take up 100% of the container on mobile */
         margin-bottom: 20px; /* Add space between stacked images */
     }
 }
-		

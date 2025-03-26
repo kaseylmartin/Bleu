@@ -2170,34 +2170,32 @@ input, select, textarea {
 
 		}
 	/* Make sure the styles only target the 'about' section */
-#about .about-images {
-	display: flex;
-	justify-content: space-between;
-	gap: 20px;
-	flex-wrap: wrap; /* Allow images to wrap on smaller screens */
-  }
-  
-  /* Styling for each individual image in the about section */
-  #about .about-images img {
-	width: 100%; /* Make sure the image scales properly */
-	max-width: 30%; /* Limit the image width to 30% on desktop */
-	height: auto; /* Maintain aspect ratio */
-	object-fit: cover; /* Ensure proper cropping of images */
-  }
-  
-  /* Mobile-specific adjustments */
-  @media (max-width: 768px) {
-	/* Stack the images on mobile devices */
-	#about .about-images {
-	  flex-direction: column; /* Stack images vertically */
-	  align-items: center; /* Center the images horizontally */
-	}
-  
-	#about .about-images img {
-	  max-width: 100%; /* Make images full width on mobile */
-	}
-	/* Add padding between the images and the bio text */
 #about .about-content {
-	padding-bottom: 20px; /* Add space after the images */
-  }
-  }
+    padding-bottom: 20px; /* Adjust as needed */
+}
+
+/* Ensure the images are spaced and responsive */
+#about .about-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#about .about-images img {
+    width: 100%;
+    max-width: 30%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    #about .about-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about .about-images img {
+        max-width: 100%;
+    }
+}

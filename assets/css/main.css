@@ -2169,16 +2169,31 @@ input, select, textarea {
 			}
 
 		}
-		@media (max-width: 768px) {
-			.about-images {
-				flex-direction: column; /* Stack images vertically on smaller screens */
-				align-items: center; /* Center images in the column layout */
-			}
-		
-			.about-thumbnail {
-				width: 100%; /* Images will take up 80% of the screen on mobile */
-				max-width: 100%; /* Ensure the images do not exceed the width of their container */
-				margin-bottom: 20px; /* Add space between stacked images */
-			}
-		}
+		/* Desktop / Default Styles (Web) */
+.about-images {
+    display: flex;
+    flex-direction: row; /* Align images side by side on larger screens */
+    justify-content: space-between; /* Distribute space evenly between images */
+    align-items: center; /* Vertically align images */
+}
+
+.about-thumbnail {
+    width: 48%; /* Each image takes up 48% of the container */
+    max-width: 100%; /* Ensure images don’t exceed their container */
+    margin-bottom: 0; /* Remove space between images */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .about-images {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+        align-items: center; /* Center images in the column layout */
+    }
+
+    .about-thumbnail {
+        width: 100%; /* Images will take up 100% of the screen on mobile */
+        max-width: 100%; /* Ensure the images do not exceed the width of their container */
+        margin-bottom: 20px; /* Add space between stacked images */
+    }
+}
 		

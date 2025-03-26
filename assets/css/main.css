@@ -2170,29 +2170,32 @@ input, select, textarea {
 
 		}
 		.about-images {
-    display: flex;
-    flex-direction: row; /* Ensure images are stacked horizontally */
-    gap: 10px; /* Space between images */
-    flex-wrap: wrap; /* Allows images to wrap on smaller screens */
-    justify-content: space-between; /* Distribute images evenly */
-}
-
-.about-thumbnail {
-    width: 100%; /* Make images responsive to their container's width */
-    max-width: 200px; /* Set a maximum width so images don't grow too large */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Crop the images to fill the container without distortion */
-    border-radius: 8px; /* Optional rounded corners */
-}
-
-@media (max-width: 768px) {
-    .about-images {
-        flex-direction: column; /* Stack images vertically on smaller screens */
-        align-items: center; /* Center images in the column layout */
-    }
-
-    .about-thumbnail {
-        width: 80%; /* Make images smaller and fit within the screen */
-        max-width: none; /* Remove the max-width restriction on mobile */
-    }
-}
+			display: flex;
+			flex-direction: row; /* Ensure images are stacked horizontally */
+			gap: 10px; /* Space between images */
+			flex-wrap: wrap; /* Allows images to wrap on smaller screens */
+			justify-content: center; /* Center images horizontally */
+			margin-bottom: 20px; /* Add some space below the images */
+		}
+		
+		.about-thumbnail {
+			width: 100%; /* Make images responsive to their container's width */
+			max-width: 200px; /* Set a maximum width so images don't grow too large */
+			height: auto; /* Maintain aspect ratio */
+			object-fit: cover; /* Crop the images to fill the container without distortion */
+			border-radius: 8px; /* Optional rounded corners */
+		}
+		
+		/* Mobile responsiveness */
+		@media (max-width: 768px) {
+			.about-images {
+				flex-direction: column; /* Stack images vertically on smaller screens */
+				align-items: center; /* Center images in the column layout */
+			}
+		
+			.about-thumbnail {
+				width: 80%; /* Make images smaller and fit within the screen */
+				max-width: none; /* Remove the max-width restriction on mobile */
+				margin-bottom: 15px; /* Add space between stacked images */
+			}
+		}

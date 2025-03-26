@@ -2169,29 +2169,6 @@ input, select, textarea {
 			}
 
 		}
-		.about-images {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			gap: 20px; /* Space between images */
-		}
-		
-		.about-thumbnail {
-			width: 100%; /* Make images responsive to their container's width */
-			max-width: 250px; /* Set a maximum width for the images */
-			height: auto; /* Maintain aspect ratio */
-			object-fit: cover; /* Crop the images to fill the container without distortion */
-			border-radius: 8px; /* Optional rounded corners */
-			margin-bottom: 20px; /* Add space between images */
-		}
-		
-		@media (min-width: 769px) {
-			.about-thumbnail {
-				width: 32%; /* For larger screens, images will take up 32% of the row's width */
-				max-width: 250px; /* Keep the max-width consistent */
-			}
-		}
-		
 		@media (max-width: 768px) {
 			.about-images {
 				flex-direction: column; /* Stack images vertically on smaller screens */
@@ -2199,7 +2176,9 @@ input, select, textarea {
 			}
 		
 			.about-thumbnail {
-				width: 80%; /* Make images smaller and fit within the screen */
-				max-width: none; /* Remove max-width restriction on mobile */
+				width: 100%; /* Images will take up 80% of the screen on mobile */
+				max-width: 100%; /* Ensure the images do not exceed the width of their container */
+				margin-bottom: 20px; /* Add space between stacked images */
 			}
 		}
+		

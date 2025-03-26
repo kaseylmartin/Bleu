@@ -2169,4 +2169,15 @@ input, select, textarea {
 			}
 
 		}
+		@media (max-width: 768px) {
+			.about-images {
+				flex-direction: column; /* Stack images vertically on smaller screens */
+				align-items: center; /* Center images in the column layout */
+			}
 		
+			.about-thumbnail {
+				width: 80%; /* Images will take up 80% of the screen on mobile */
+				max-width: 100%; /* Ensure the images do not exceed the width of their container */
+				margin-bottom: 20px; /* Add space between stacked images */
+			}
+		}

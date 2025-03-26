@@ -2176,7 +2176,7 @@ input, select, textarea {
 			}
 		
 			.about-thumbnail {
-				width: 80%; /* Images will take up 80% of the screen on mobile */
+				width: 100%; /* Images will take up 80% of the screen on mobile */
 				max-width: 100%; /* Ensure the images do not exceed the width of their container */
 				margin-bottom: 20px; /* Add space between stacked images */
 			}

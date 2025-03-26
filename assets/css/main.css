@@ -2169,19 +2169,20 @@ input, select, textarea {
 			}
 
 		}
-	/* Make sure the styles only target the 'about' section */
+/* Base styles for the 'about' section (applies to web and mobile by default) */
+
+/* Apply padding to the content under the images (web version) */
 #about .about-content {
-    padding-bottom: 20px; /* Adjust as needed */
+    padding-bottom: 20px !important; /* Ensure padding is applied */
 }
+
+/* Ensure the bio text is single-spaced (web version) */
 #about .about-text p {
     line-height: 1;
     margin-bottom: 15px; /* Optional: Adjust space between paragraphs */
 }
-.about-images {
-    padding-bottom: 30px !important;
-}
 
-/* Ensure the images are spaced and responsive */
+/* Styling for the images in the 'about' section (web version) */
 #about .about-images {
     display: flex;
     justify-content: space-between;
@@ -2189,24 +2190,35 @@ input, select, textarea {
     flex-wrap: wrap;
 }
 
+/* Make sure the images are responsive and spaced evenly on the web version */
 #about .about-images img {
     width: 100%;
-    max-width: 30%;
+    max-width: 30%; /* Limit to 3 images per row */
     height: auto;
     object-fit: cover;
 }
 
+/* Mobile styles */
 @media (max-width: 768px) {
+    /* Adjust the layout for mobile devices */
     #about .about-images {
         flex-direction: column;
         align-items: center;
     }
 
+    /* Make the images full width on mobile */
     #about .about-images img {
         max-width: 100%;
     }
-	/* Ensure the bio text is single-spaced */
-.about-images {
-    padding-bottom: 30px !important;
-}
+
+    /* Ensure the padding and other properties are mobile-responsive */
+    #about .about-images {
+        padding-bottom: 30px !important; /* Apply padding on mobile */
+    }
+
+    /* Ensure the bio text is single-spaced (mobile version) */
+    #about .about-text p {
+        line-height: 1;
+        margin-bottom: 15px;
+    }
 }

@@ -2173,6 +2173,13 @@ input, select, textarea {
 #about .about-content {
     padding-bottom: 20px; /* Adjust as needed */
 }
+#about .about-text p {
+    line-height: 1;
+    margin-bottom: 15px; /* Optional: Adjust space between paragraphs */
+}
+.about-images {
+    padding-bottom: 30px !important;
+}
 
 /* Ensure the images are spaced and responsive */
 #about .about-images {
@@ -2199,10 +2206,6 @@ input, select, textarea {
         max-width: 100%;
     }
 	/* Ensure the bio text is single-spaced */
-#about .about-text p {
-    line-height: 1;
-    margin-bottom: 15px; /* Optional: Adjust space between paragraphs */
-}
 .about-images {
     padding-bottom: 30px !important;
 }

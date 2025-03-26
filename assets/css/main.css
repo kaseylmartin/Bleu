@@ -2169,16 +2169,17 @@ input, select, textarea {
 			}
 
 		}
-		.about-images .row {
+		.about-images-row {
 			display: flex;
-			justify-content: center; /* Centers images in a row */
-			gap: 15px; /* Adds spacing between images */
+			justify-content: center; /* Center images horizontally */
+			align-items: center; /* Align images vertically */
+			gap: 20px; /* Adds space between images */
+			flex-wrap: nowrap; /* Ensures all images stay in one row */
 		}
 		
 		.about-thumbnail {
 			width: 300px; /* Fixed width */
 			height: 200px; /* Fixed height */
-			object-fit: cover; /* Ensures images are cropped properly */
-			border-radius: 8px; /* Optional: Adds rounded corners */
-			display: block;
+			object-fit: cover; /* Ensures the image fills the box without stretching */
+			border-radius: 8px; /* Optional: adds rounded corners */
 		}

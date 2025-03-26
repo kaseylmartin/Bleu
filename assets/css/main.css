@@ -2198,4 +2198,9 @@ input, select, textarea {
     #about .about-images img {
         max-width: 100%;
     }
+	/* Ensure the bio text is single-spaced */
+#about .about-text p {
+    line-height: 1;
+    margin-bottom: 15px; /* Optional: Adjust space between paragraphs */
+}
 }

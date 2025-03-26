@@ -2169,32 +2169,4 @@ input, select, textarea {
 			}
 
 		}
-		/* Default (Desktop / Web) Styles */
-.about-images {
-    display: flex; /* Make sure flexbox is applied */
-    flex-wrap: wrap; /* Allow wrapping if necessary */
-    justify-content: space-between; /* Space out the images evenly */
-    gap: 16px; /* Optional: space between the images */
-    align-items: center; /* Vertically center images */
-}
-
-.about-thumbnail {
-    flex: 1 1 30%; /* Each image will take up 30% of the container's width */
-    max-width: 33%; /* Ensures that 3 images fit in one row */
-    width: 100%; /* Make sure the image stretches to fill its container */
-    margin-bottom: 20px; /* Add space below the images */
-    object-fit: cover; /* Make sure images fill the space without distorting */
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .about-images {
-        flex-direction: column; /* Stack images vertically on smaller screens */
-        align-items: center; /* Center images in the column layout */
-    }
-
-    .about-thumbnail {
-        width: 100%; /* Images will take up 100% of the container on mobile */
-        margin-bottom: 20px; /* Add space between stacked images */
-    }
-}
+	

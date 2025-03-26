@@ -2169,4 +2169,30 @@ input, select, textarea {
 			}
 
 		}
-	
+	/* Container for the images */
+.about-images {
+	display: flex; /* Align images in a row */
+	justify-content: space-between; /* Evenly space the images */
+	gap: 20px; /* Space between images */
+	flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+  }
+  
+  /* Styling each image */
+  .about-images img {
+	width: 100%; /* Make sure the image scales to the width of the container */
+	max-width: 30%; /* Limit the maximum width of images to 30% */
+	height: auto; /* Maintain aspect ratio */
+	object-fit: cover; /* Ensure proper cropping */
+  }
+  
+  /* Mobile-specific styles */
+  @media (max-width: 768px) {
+	.about-images {
+	  flex-direction: column; /* Stack images on mobile */
+	  align-items: center; /* Center images horizontally */
+	}
+  
+	.about-images img {
+	  max-width: 100%; /* Make images take up the full width on mobile */
+	}
+  }

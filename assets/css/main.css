@@ -2196,4 +2196,8 @@ input, select, textarea {
 	#about .about-images img {
 	  max-width: 100%; /* Make images full width on mobile */
 	}
+	/* Add padding between the images and the bio text */
+#about .about-content {
+	padding-bottom: 20px; /* Add space after the images */
+  }
   }

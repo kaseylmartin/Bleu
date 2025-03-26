@@ -2169,28 +2169,30 @@ input, select, textarea {
 			}
 
 		}
-		.about-content {
-			display: flex;
-			align-items: flex-start; /* Aligns images and text to the top */
-			gap: 20px; /* Space between images and text */
-			flex-wrap: wrap; /* Ensures responsiveness */
-		}
-		
 		.about-images {
 			display: flex;
-			flex-direction: column; /* Stack images vertically */
+			flex-direction: row; /* Ensure images are stacked horizontally */
 			gap: 10px; /* Space between images */
-			flex-shrink: 0; /* Prevent images from shrinking */
+			flex-wrap: wrap; /* Allows images to wrap on smaller screens */
+			justify-content: space-between; /* Distribute images evenly */
 		}
 		
 		.about-thumbnail {
-			width: 200px; /* Adjust size as needed */
-			height: auto;
-			object-fit: cover;
+			width: 100%; /* Make images responsive to their container's width */
+			max-width: 200px; /* Set a maximum width so images don't grow too large */
+			height: auto; /* Maintain aspect ratio */
+			object-fit: cover; /* Crop the images to fill the container without distortion */
 			border-radius: 8px; /* Optional rounded corners */
 		}
 		
-		.about-text {
-			flex: 1; /* Allows text to take up remaining space */
-			max-width: 600px; /* Keeps text readable */
+		@media (max-width: 768px) {
+			.about-images {
+				flex-direction: column; /* Stack images vertically on smaller screens */
+				align-items: center; /* Center images in the column layout */
+			}
+		
+			.about-thumbnail {
+				width: 80%; /* Make images smaller and fit within the screen */
+				max-width: none; /* Remove the max-width restriction on mobile */
+			}
 		}

@@ -2180,7 +2180,7 @@ input, select, textarea {
 .about-thumbnail {
     width: 48%; /* Each image takes up 48% of the container */
     max-width: 100%; /* Ensure images don’t exceed their container */
-    margin-bottom: 0; /* Remove space between images */
+    margin-bottom: 20px; /* Remove space between images */
 }
 
 /* Mobile Styles */

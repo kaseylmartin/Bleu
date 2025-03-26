@@ -2169,56 +2169,48 @@ input, select, textarea {
 			}
 
 		}
-/* Base styles for the 'about' section (applies to web and mobile by default) */
-
-/* Apply padding to the content under the images (web version) */
-#about .about-content {
-    padding-bottom: 20px !important; /* Ensure padding is applied */
-}
-
-/* Ensure the bio text is single-spaced (web version) */
+/* Ensure proper line spacing and margins for text */
 #about .about-text p {
-    line-height: 1;
-    margin-bottom: 15px; /* Optional: Adjust space between paragraphs */
+    line-height: 1.6; /* Sets line height for readability */
+    margin-bottom: 20px; /* Adds space between paragraphs */
 }
 
-/* Styling for the images in the 'about' section (web version) */
+/* Add padding below the images */
+#about .about-content {
+    padding-bottom: 40px; /* Creates space after the images */
+}
+
+/* Layout for images with appropriate spacing */
 #about .about-images {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 20px; /* Spacing between images */
     flex-wrap: wrap;
+    margin-bottom: 20px; /* Space between images and text */
 }
 
-/* Make sure the images are responsive and spaced evenly on the web version */
 #about .about-images img {
     width: 100%;
-    max-width: 30%; /* Limit to 3 images per row */
+    max-width: 30%; /* Restricts images to 30% max width */
     height: auto;
     object-fit: cover;
 }
 
-/* Mobile styles */
+/* Ensure proper spacing on smaller screens */
 @media (max-width: 768px) {
-    /* Adjust the layout for mobile devices */
     #about .about-images {
-        flex-direction: column;
+        flex-direction: column; /* Stacks images on mobile */
         align-items: center;
+        gap: 20px; /* Adds spacing between stacked images */
     }
 
-    /* Make the images full width on mobile */
     #about .about-images img {
-        max-width: 100%;
+        max-width: 100%; /* Makes images fit width on mobile */
     }
 
-    /* Ensure the padding and other properties are mobile-responsive */
-    #about .about-images {
-        padding-bottom: 30px !important; /* Apply padding on mobile */
-    }
-
-    /* Ensure the bio text is single-spaced (mobile version) */
-    #about .about-text p {
-        line-height: 1;
-        margin-bottom: 15px;
+    /* Add padding to the bio text for mobile */
+    #about .about-text {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }

@@ -1978,7 +1978,7 @@ input, select, textarea {
 
 #main > .panel.intro {
     padding: 0;
-    height: 30em; /* Adjust this height for your needs */
+    height: 20em; /* Adjust this height for your needs */
     display: flex;
     flex-direction: row;
     align-items: center;

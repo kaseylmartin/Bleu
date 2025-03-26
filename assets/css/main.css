@@ -2169,12 +2169,12 @@ input, select, textarea {
 			}
 
 		}
-		/* Desktop / Default Styles (Web) */
+		/* Default (Desktop / Web) Styles */
 .about-images {
-    display: flex;
-    flex-direction: row; /* Align images side by side on larger screens */
+    display: flex; /* Make sure flexbox is applied */
+    flex-direction: row; /* Align images side by side */
     justify-content: space-between; /* Distribute space evenly between images */
-    align-items: center; /* Vertically align images */
+    align-items: center; /* Vertically center images */
 }
 
 .about-thumbnail {

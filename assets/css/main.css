@@ -1989,7 +1989,7 @@ input, select, textarea {
     position: relative;
     flex-grow: 0;
     flex-shrink: 0;
-    width: 50%; /* Increase width to make image section wider */
+    width: 60%; /* Increase width to make image section wider */
     height: 100%;
 }
 

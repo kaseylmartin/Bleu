@@ -2181,3 +2181,35 @@ input, select, textarea {
 				margin-bottom: 20px; /* Add space between stacked images */
 			}
 		}
+		/* Style for the home section */
+#home {
+    position: relative; /* To position the header relative to the image */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    padding-top: 20px; /* Add padding at the top of the section */
+}
+
+/* Ensure the image and text don't overlap on mobile */
+#home img {
+    width: 100%; /* Ensure the image spans the entire width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Make sure the image covers the section properly */
+}
+
+/* Adjust header text positioning on mobile */
+@media (max-width: 768px) {
+    #home header {
+        position: absolute; /* Position the header on top of the image */
+        top: 50%; /* Center it vertically in the section */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Use transform to fine-tune centering */
+        padding: 0 20px; /* Add padding to ensure text doesn't touch the edges */
+        background: rgba(0, 0, 0, 0.5); /* Optional: dark background behind text for contrast */
+        color: white; /* Text color */
+        text-align: center; /* Center the text */
+    }
+
+    /* Add extra space around text on small screens */
+    #home header h1, #home header p {
+        font-size: 1.5em; /* Adjust font size for readability */
+    }
+}

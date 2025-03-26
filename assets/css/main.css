@@ -2169,42 +2169,30 @@ input, select, textarea {
 			}
 
 		}
-		/* About Section Layout */
-.about-images-row {
-    display: flex; 
-    flex-wrap: wrap; /* Makes the images responsive */
+		.about-images {
+    display: flex;
+    flex-direction: row; /* Ensure images are stacked horizontally */
     gap: 10px; /* Space between images */
-}
-
-.about-images-row .col-4 {
-    flex: 1 1 33%; /* Ensures 3 images per row on large screens */
-    max-width: 33%; /* Keeps each image in a 3-column layout */
+    flex-wrap: wrap; /* Allows images to wrap on smaller screens */
+    justify-content: space-between; /* Distribute images evenly */
 }
 
 .about-thumbnail {
-    width: 100%; /* Makes the image responsive */
-    height: auto; /* Maintains aspect ratio */
-    object-fit: cover; /* Ensures image covers the space without distortion */
+    width: 100%; /* Make images responsive to their container's width */
+    max-width: 200px; /* Set a maximum width so images don't grow too large */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Crop the images to fill the container without distortion */
+    border-radius: 8px; /* Optional rounded corners */
 }
 
-/* Bio Text */
-.about-text {
-    margin-top: 20px;
-    text-align: left;
-}
-
-.about-text p {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-/* Mobile Adjustments */
 @media (max-width: 768px) {
-    .about-images-row .col-4 {
-        flex: 1 1 100%; /* Stack the images vertically on small screens */
-        max-width: 100%;
+    .about-images {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+        align-items: center; /* Center images in the column layout */
     }
-    .about-text {
-        padding: 0 10px; /* Add some padding for mobile text readability */
+
+    .about-thumbnail {
+        width: 80%; /* Make images smaller and fit within the screen */
+        max-width: none; /* Remove the max-width restriction on mobile */
     }
 }

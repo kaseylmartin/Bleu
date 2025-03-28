@@ -1989,8 +1989,12 @@ input, select, textarea {
     position: relative;
     flex-grow: 0;
     flex-shrink: 0;
-    width: 50%; /* Increase width to make image section wider */
-    height: 100%;
+    width: 50%; /* Adjust as needed */
+    height: auto; /* Change from 100% to auto to prevent extra space */
+    display: flex; /* Ensures it doesn’t collapse */
+    align-items: center; /* Centers the image */
+    justify-content: center; /* Keeps layout clean */
+    overflow: hidden; /* Prevents any extra space */
 }
 
 #main > .panel.intro .pic:before {
@@ -2007,14 +2011,8 @@ input, select, textarea {
 #main > .panel.intro .pic img {
     position: relative;
     display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    -moz-object-fit: cover;
-    -webkit-object-fit: cover;
-    -ms-object-fit: cover;
+    height: auto; /* Change from 100% to auto to maintain aspect ratio */
     object-fit: cover;
     object-position: center;
 }

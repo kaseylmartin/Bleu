@@ -1990,7 +1990,7 @@ input, select, textarea {
     flex-grow: 0;
     flex-shrink: 0;
     width: 50%; /* Adjust as needed */
-    height: auto; /* Change from 100% to auto to prevent extra space */
+    height: 100%; /* Change from 100% to auto to prevent extra space */
     display: flex; /* Ensures it doesn’t collapse */
     align-items: center; /* Centers the image */
     justify-content: center; /* Keeps layout clean */

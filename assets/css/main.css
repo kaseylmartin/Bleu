@@ -2214,3 +2214,13 @@ input, select, textarea {
         padding-right: 15px;
     }
 }
+#footer {
+    position: absolute; /* or 'fixed' if you want it to always stay at the bottom */
+    bottom: 20;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #ffffff; /* Adjust as needed */
+    color: white;
+    padding: 2px 0;
+}
